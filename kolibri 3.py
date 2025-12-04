@@ -27,4 +27,5 @@ return cargo
 @app.get("/cargo"/)
 def list_cargo():
 with Session(engine) as session:
+
 return session.exec(select(Cargo)).all()
